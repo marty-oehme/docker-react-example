@@ -1,4 +1,7 @@
-FROM node:alpine
+#FROM node:alpine
+# needs to work around bug with node v11.11.0 and travis-ci. Future versions of jest fix this, see
+# https://github.com/facebook/create-react-app/issues/6591
+FROM node:lts-alpine
 
 WORKDIR '/app'
 
